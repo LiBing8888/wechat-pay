@@ -1,0 +1,24 @@
+<view class="page">
+  <view wx:if="{{tip}}" class="banner">{{tip}}</view>
+
+  <view class="card">
+    <view class="title">运行环境</view>
+    <view class="row"><text class="muted">当前环境</text><text>{{env}}</text></view>
+    <view class="row"><text class="muted">接口地址</text><text class="wrap">{{apiBase}}</text></view>
+    <view class="row"><text class="muted">进入场景值</text><text>{{scene}}</text></view>
+    <view class="row"><text class="muted">来源小程序 appId</text><text class="wrap">{{refAppId}}</text></view>
+    <view class="row"><text class="muted">登录态</text><text>{{logged ? '已登录' : '未登录'}}</text></view>
+  </view>
+
+  <view class="card">
+    <view class="title">联调入口</view>
+    <button class="btn" bindtap="onTapDemoPay">打开支付页（B202611170001）</button>
+    <button class="btn ghost" bindtap="onTapRelogin">重新静默登录</button>
+    <button class="btn ghost" bindtap="onTapClear">清空本地缓存</button>
+  </view>
+
+  <view class="muted note">
+    场景值为 1038 且来源 appId 等于收银台 appId 时，支付页会按「小程序返回」逻辑处理结果；
+    其余场景值仅作为普通进入。
+  </view>
+</view>

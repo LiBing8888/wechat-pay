@@ -1,0 +1,38 @@
+<view class="page">
+  <view class="card">
+    <view class="title">通联收银台联调 Demo</view>
+    <view class="muted">小程序按「从 0 到 1」方式新建，本页与订单、我的共同构成过审所需最小页面集。</view>
+  </view>
+
+  <view wx:if="{{tip}}" class="banner">{{tip}}</view>
+
+  <view class="card">
+    <view class="row">
+      <text class="title">最近订单</text>
+      <text class="muted" bindtap="onTapAll">全部 ›</text>
+    </view>
+
+    <view wx:if="{{loading}}" class="empty">加载中…</view>
+    <view wx:elif="{{!orders.length}}" class="empty">暂无订单</view>
+
+    <view
+      wx:for="{{orders}}"
+      wx:key="orderNo"
+      class="order"
+      data-order-no="{{item.orderNo}}"
+      data-status="{{item.status}}"
+      bindtap="onTapOrder"
+    >
+      <view class="row">
+        <text class="ellipsis">{{item.body}}</text>
+        <text
+          class="tag {{item.status === 'SUCCESS' ? 'success' : (item.status === 'PAYING' ? 'paying' : 'closed')}}"
+        >{{item.status === 'SUCCESS' ? '已支付' : (item.status === 'PAYING' ? '待支付' : '已关闭')}}</text>
+      </view>
+      <view class="row">
+        <text class="muted">{{item.orderNo}}</text>
+        <text class="money">¥{{item.amountText}}</text>
+      </view>
+    </view>
+  </view>
+</view>

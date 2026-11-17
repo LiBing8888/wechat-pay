@@ -1,0 +1,33 @@
+{
+  "description": "商户小程序（从 0 到 1）：首页 / 订单 / 我的 / pay 支付页（前端开发文档V2 §5）",
+  "compileType": "miniprogram",
+  "libVersion": "3.5.7",
+  "appid": "wx1234567890abcdef",
+  "projectname": "merchant-cashier-miniprogram",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "ignoreUploadUnusedFiles": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "Scheme 拉起支付页（F01）",
+          "pathName": "pages/pay/pay",
+          "query": "orderNo=B202611170001&source=h5",
+          "scene": 1038
+        },
+        {
+          "name": "订单已过期（PAY_ORDER_EXPIRED）",
+          "pathName": "pages/pay/pay",
+          "query": "orderNo=B202611170004&source=h5",
+          "scene": 1038
+        }
+      ]
+    }
+  }
+}

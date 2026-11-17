@@ -1,0 +1,21 @@
+<view class="page">
+  <view wx:if="{{tip}}" class="banner">{{tip}}</view>
+
+  <view wx:if="{{loading}}" class="empty">加载中…</view>
+  <view wx:elif="{{!list.length}}" class="empty">暂无订单</view>
+
+  <view wx:for="{{list}}" wx:key="orderNo" class="card">
+    <view class="row" data-order-no="{{item.orderNo}}" bindtap="onTapOrder">
+      <text class="ellipsis">{{item.body}}</text>
+      <text class="tag {{item.tag.cls}}">{{item.tag.text}}</text>
+    </view>
+    <view class="row" data-order-no="{{item.orderNo}}" bindtap="onTapOrder">
+      <text class="muted">{{item.orderNo}}</text>
+      <text class="money">¥{{item.amountText}}</text>
+    </view>
+    <view class="row">
+      <text class="muted">{{item.createdText}}</text>
+      <text class="link" data-order-no="{{item.orderNo}}" bindtap="onTapOrder">详情 ›</text>
+    </view>
+  </view>
+</view>

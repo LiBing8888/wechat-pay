@@ -1,0 +1,23 @@
+{
+  "name": "h5-cashier",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "外部浏览器 H5：URL Scheme 拉起小程序收银台支付（前端开发文档V2 §4）",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.5",
+    "vue-tsc": "^2.2.0"
+  }
+}

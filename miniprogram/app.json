@@ -1,0 +1,27 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/order/list/list",
+    "pages/order/detail/detail",
+    "pages/user/user",
+    "pages/pay/pay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "商户商城",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f6f8"
+  },
+  "tabBar": {
+    "color": "#8a9099",
+    "selectedColor": "#07c160",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页" },
+      { "pagePath": "pages/order/list/list", "text": "订单" },
+      { "pagePath": "pages/user/user", "text": "我的" }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
