@@ -1,0 +1,1 @@
+export const SELECTOR_HEADER_HEIGHT = uni.upx2px(88); // 选择器头部高度，单位：px
